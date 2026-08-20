@@ -412,11 +412,11 @@ void p18()
 // ***    ***
 // ****  ****
 // **********
-void p19()
+void p19(int n)
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 5; j > i; j--)
+        for (int j = n; j > i; j--)
         {
             cout << "*";
         }
@@ -424,15 +424,15 @@ void p19()
         {
             cout << " ";
         }
-        for (int j = 5; j > i; j--)
+        for (int j = n; j > i; j--)
         {
             cout << "*";
         }
         cout << '\n';
     }
-    for (int i = 4; i >= 0; i--)
+    for (int i = n-1; i >= 0; i--)
     {
-        for (int j = 5; j > i; j--)
+        for (int j = n; j > i; j--)
         {
             cout << "*";
         }
@@ -440,7 +440,7 @@ void p19()
         {
             cout << " ";
         }
-        for (int j = 5; j > i; j--)
+        for (int j = n; j > i; j--)
         {
             cout << "*";
         }
@@ -564,7 +564,7 @@ int main()
     p16();
     p17(4);
     p18();
-    p19();
+    p19(5);
     p20();
     p21(4);
     p22(4);
