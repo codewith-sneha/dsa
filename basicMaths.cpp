@@ -80,6 +80,78 @@ void gcdOf2NumOptimal(int n1, int n2){
 }
 
 
+// TC : O(log n) => [log n(base 10) +1] bcoz no. of iteration depend on no. of terms
+void checkArmstrong(int n){
+    int len = to_string(n).length();
+    int armNum =n,res=0;
+    while(armNum!=0){
+        int digit = armNum%10;
+        res+=pow(digit,len);
+        armNum/=10;
+    } 
+    if(res==n){
+        cout<<"number is armstrong \n";
+    }
+    else{
+        cout<<"number is not a armstrong \n";
+    }
+}
+
+
+// TC : O(n)
+void printAllDivisors(int n){
+    for(int i =1;i<=n;i++){
+        if(n%i==0){
+            cout<<i<<" ";
+        }
+    }
+    cout<<"\n";
+}
+
+void printAllDivisorsOptimal(int n){
+    for(int i=1;i<=sqrt(n);i++){
+        if(n%i==0){
+            cout<<i<<" ";
+            if(n/i!=i){
+                cout<<n/i<<" ";
+            }
+        }
+    }
+    cout<<'\n';
+}
+
+void checkPrime(int n){
+    bool flag=true;
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            flag=false;
+            break;
+        }
+    }
+    if(flag){
+        cout<<"num is prime no. \n";
+    }
+    else{
+        cout<<"num is not a prime no. \n";
+    }
+}
+
+void checkPrimeOptimal(int n){
+    bool flag=true;
+    for(int i=2;i<sqrt(n);i++){
+        if(n%i==0){
+            flag=false;
+            break;
+        }
+    }
+    if(flag){
+        cout<<"num is prime no. \n";
+    }
+    else{
+        cout<<"num is not a prime no. \n";
+    }
+}
+
 int main(){
     countDigit(12345);
     countDigitOptimal(12345);
@@ -88,4 +160,9 @@ int main(){
     gcdOf2Num(20 , 15);
     gcdOf2NumBetter(20,15);
     gcdOf2NumOptimal(20,15);
+    checkArmstrong(157);
+    printAllDivisors(36);
+    printAllDivisorsOptimal(38);
+    checkPrime(8);
+    checkPrimeOptimal(13);
 }
