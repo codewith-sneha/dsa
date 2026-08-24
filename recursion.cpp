@@ -86,6 +86,27 @@ palindromeStrOptimal(str,i+1);
 
 }
 
+int fibonacciOptimal(int n ){
+    if(n<=1){
+        return n;
+    }
+    int last = fibonacciOptimal(n-1);
+    int slast =fibonacciOptimal(n-2);
+    return last +slast;
+}
+
+void fibonacci(int n){
+    cout<<"0 1 ";
+    int n1=0,n2=1;
+    for(int i=2;i<=n;i++){
+        int n3=n1+n2;
+        cout<<n3<<" ";
+        n1=n2;
+        n2=n3;
+    }
+    cout<<"\n";
+}
+
 int main(){
     printTest(5);
     cout<<'\n';
@@ -101,4 +122,6 @@ int main(){
     string str = "madama";
     palindromeStr(str , str.length()-1 );
     palindromeStrOptimal(str,0);
+    cout<<fibonacciOptimal(6)<<"\n";
+    fibonacci(6);
 }
