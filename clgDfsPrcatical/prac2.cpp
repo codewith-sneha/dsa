@@ -78,13 +78,35 @@ void commonElemntBetwenTwoArray(){
     cout<<"No common element found"<<'\n';
 }
 
+void deleteElementAtPos(int pos){
+    if(pos>n1 || pos<1){
+        cout<<"Invalid position"<<'\n';
+        return;
+    }
+    for(int i=pos-1;i<n1-1;i++){
+        a1[i]=a1[i+1];
+    }
+    a1[n1-1]=0; 
+    n1--;
+}
+
 
 int main(){
-    sortArrayAsc();
+    cout<<"Array ";
     printArray(arr, n);
+    sortArrayAsc();
+    cout<<"Array after sorting in ascending order: ";
+    printArray(arr, n);
+    cout<<"Array after sorting in descending order: ";
     sortArrayDesc();
     printArray(arr, n);
+    cout<<"Array before inserting element: ";
+    printArray(a1, 8);
     insertElement(3, 10);
+    cout<<"Array after inserting element: ";
+    printArray(a1, 8);
+    deleteElementAtPos(3);
+    cout<<"Array after deleting element: ";
     printArray(a1, 8);
     findDuplicate();
     commonElemntBetwenTwoArray();
