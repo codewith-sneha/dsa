@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 #include<iostream>
 using namespace std;
 
@@ -21,21 +22,17 @@ void maxProfitBruteForce(vector<int>&nums){
     cout<<"max profit : "<<max_profit<<'\n';
 }
 
-void optimal(vector<int>&nums){
-    int start =0, end = nums.size()-1, max_profit =0;
-    sort(nums.begin(),nums.end());
-    while(start<=end){
-        if(nums[end]-nums[start]>max_profit){
-            max_profit=nums[end]-nums[start];
+int maxProfitOptimal(vector<int>& prices) {
+        int mn=prices[0], profit=0;
+        for(int i =1;i<prices.size();i++){
+            profit=max(profit,prices[i]-mn);
+            mn=min(mn,prices[i]);
         }
-        end--;
-        start++;
+        return profit;
     }
-    cout<<"max profit : "<<max_profit;
-}
 
 int main(){
     vector<int> arr = {7,1,5,3,6,4};
     maxProfitBruteForce(arr);
-    maxProfitBruteForce(arr);
+    cout<<"profit : "<<maxProfitOptimal(arr);
 }
