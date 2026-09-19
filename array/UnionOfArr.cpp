@@ -14,6 +14,34 @@ void print(vector<int> &arr ){
     cout<<'\n';
 }
 
+void UsingTwoPointer(){
+    vector<int> temp;
+    int i=0,j=0, k=0;
+    while(i<n1&&j<n2){
+        if(a1[i]<a2[j]){
+            temp.push_back(a1[i]);
+            k++;i++;
+        }
+        else if(a1[i]>a2[j]){
+            temp.push_back(a2[j]);
+            k++;j++;
+        }
+        else{
+            temp.push_back(a1[i]);
+            k++;j++;i++;
+        }
+    }
+    while(i<n1){
+        temp.push_back(a1[i]);
+            k++;i++;
+    }
+    while(j<n2){
+        temp.push_back(a2[j]);
+            k++;j++;
+    }
+    print(temp);
+}
+
 void usingMap(){
     map<int ,int> mp;
     for(int i=0;i<n1;i++){
@@ -32,4 +60,5 @@ void usingMap(){
 
 int main(){
     usingMap();
+    UsingTwoPointer();
 }
