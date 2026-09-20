@@ -44,6 +44,7 @@ void bruteApproach(){
 // Expected: 1 ^ 2 ^ 3 ^ 4 ^ 5
 // Array: 1 ^ 2 ^ 4 ^ 5
 // When you XOR both: (1 ^ 2 ^ 4 ^ 5) ^ (1 ^ 2 ^ 3 ^ 4 ^ 5).  bcoz a^a=0 and a^0=a
+// TC :O(N)
 void optimalApproachUsingXor(){
     int xor1 =0 , xor2=0;
     for(int i =0;i<num;i++){
@@ -58,7 +59,7 @@ void optimalApproachUsingXor(){
     cout<<"missing num : "<<missing<<'\n';
 }
 
-
+// TC :O(N)
 void optimalApproach(){
     int sum =0;
     for(int i =0;i<num;i++){
