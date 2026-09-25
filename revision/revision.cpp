@@ -3,13 +3,25 @@
 using namespace std;
 
 vector <int> arr = {1,0,2,0,3,5};
+vector <int> arr2 ={1, 1, 2, 2, 2, 3, 4, 4};
 int n=arr.size();
+int n2 = arr2.size();
 
-void print(){
+void print(vector <int> arr){
     for(int i : arr){
         cout<<i<<" ";
     }
     cout<<'\n';
+}
+
+void removeDuplicate(){
+    int j=0;
+    for(int i =1;i<n2;i++){
+        if(arr2[i]!=arr2[j]){
+            j++;
+            arr2[j]=arr2[i];
+        }
+    }
 }
 
 
@@ -36,5 +48,7 @@ void optimalMoveZeroToEnd(){
 
 int main(){
     optimalMoveZeroToEnd();
-    print();
+    print(arr);
+    removeDuplicate();
+    print(arr2);
 }
