@@ -152,6 +152,20 @@ void checkPrimeOptimal(int n){
     }
 }
 
+// https://leetcode.com/problems/palindrome-number/
+    bool isPalindrome(int x) {
+        string s = to_string(x);
+        int start=0, end = s.length()-1;
+        while(start<=end){
+            if(s[start]!=s[end]){
+                return false;
+            }
+            start++;end--;
+        }
+        return true;
+    }
+
+
 int main(){
     countDigit(12345);
     countDigitOptimal(12345);
