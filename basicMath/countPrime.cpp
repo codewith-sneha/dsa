@@ -20,6 +20,7 @@ int brute(int n){
             }
         }
         cout<<"count : "<<cnt;
+        return cnt;
 }
 
 int countPrimes(int n) {
