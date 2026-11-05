@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 using namespace std;
 
 vector<int> a={1,0,1,0,0,3,5,0,1};
@@ -13,6 +14,25 @@ void print(vector<int> a,int n){
         cout<<a[i]<<" ";
     }
     cout<<'\n';
+}
+
+void anagram(string s ,string t){
+if(s.length()!=t.length()){
+    cout<<"Not anagrams\n";
+    return;
+}
+int freq[26]={0}; 
+for(int i=0;i<s.length();i++){
+    freq[s[i]-'a']++;
+    freq[t[i]-'a']--;
+}
+for(int i=0;i<26;i++){
+    if(freq[i]  !=0){
+        cout<<"Not anagrams\n";
+        return;
+    }
+}
+cout<<"Anagrams\n";
 }
 
 void RemoveDuplicatesfromSortedArray(){
@@ -47,6 +67,7 @@ int main(){
    print(a2, n2);
    RemoveDuplicatesfromSortedArray();
    print(a2, n2);
+   anagram("listen","silent");
     return 0;
 }
 
