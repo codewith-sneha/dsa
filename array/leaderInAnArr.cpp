@@ -19,7 +19,7 @@ void print(vector<int> arr){
 }
 
 // TC - O(n^2) , SC- O(n)
-void bruteForceApproach(){
+void optimalApproach(){
     bool flag=true;
     vector <int> leaders;
     for(int i =0;i<n;i++){
@@ -60,7 +60,7 @@ void optimalApproach(){
 }
 
 int main(){
-    bruteForceApproach();
+    optimalApproach();
     // betterApproachUsingSorting();
     optimalApproach();
 }

@@ -7,7 +7,7 @@ vector <int> arr = {2, 2, 1, 1, 1, 2, 2};
 int n =arr.size();
 
 //TC - O(nlogn) SC- O(n)
-void bruteForceApproach(){
+void optimalApproach(){
     map<int, int> mp;
     for(int i =0;i<n;i++){
         mp[arr[i]]++;
@@ -54,6 +54,6 @@ void mooreVotingAlgorithm(){
 }
 
 int main(){
-    bruteForceApproach();
+    optimalApproach();
     mooreVotingAlgorithm();
 }

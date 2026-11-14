@@ -8,7 +8,7 @@ vector<int> arr = {1, 2, 3, 1, 1, 1,1};
 int k = 3,n=arr.size();
 
 // Time: O(n*n) , Space: O(1)
-void bruteForceApproach(){
+void optimalApproach(){
     int sum=0 , maxCount=0 , count=0;
     for(int i =0;i<n;i++){
         sum=arr[i];
@@ -66,6 +66,6 @@ void optimalApproach(){
 
 int main(){
     print();
-    bruteForceApproach();
+    optimalApproach();
     optimalApproach();
 }

@@ -13,7 +13,7 @@ void print(){
 }
 
 // TC - O(n^2) SC- O(1)
-void bruteForceApproach(){
+void optimalApproach(){
     int sum=0 , maxcount=0 , count=0;
     for(int i =0;i<n;i++){
     sum=arr[i];
@@ -55,6 +55,6 @@ void optimalApproach(){
 }
 
 int main(){
-    bruteForceApproach();
+    optimalApproach();
     optimalApproach();
 }

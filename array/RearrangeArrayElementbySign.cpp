@@ -15,7 +15,7 @@ void print(vector<int> arr){
     cout<<'\n';
 }
 
-void bruteForceApproach(){
+void optimalApproach(){
     vector<int>v1,v2,ans;
     for(int i =0;i<n;i++){
         if(arr[i]<0){
@@ -62,7 +62,7 @@ void betterApproach(){
 }
 
 int main(){
-    bruteForceApproach();
+    optimalApproach();
     betterApproach();
     return 0;
 }
