@@ -1,13 +1,39 @@
-# VS Code
-.vscode/
-
-# Compiled binaries
+# ==========================
+# C++ Compiled Files
+# ==========================
+*.o
+*.obj
 *.out
 *.exe
-*.o
-
-# Debug symbols
+*.a
+*.so
+*.dylib
+*.dll
 *.dSYM/
 
-# macOS
+# Common compiler output
+a.out
+a.exe
+
+# ==========================
+# macOS Files
+# ==========================
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+*.code-workspace
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~

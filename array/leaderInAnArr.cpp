@@ -1,4 +1,6 @@
 #include<iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 // An element is called a leader if it is strictly greater than every element to its right.
