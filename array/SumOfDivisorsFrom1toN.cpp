@@ -5,7 +5,6 @@ using namespace std;
 
 // TC - O(n√n) , SC-O(1)
     long long sumOfDivisors(long long n) {
-        // Code here
      long long allSum=0;
        for(int i =1;i<=n;i++){
            long long sum =0;
