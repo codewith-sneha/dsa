@@ -39,6 +39,31 @@ void printSpiral(){
     printArr(ans);
 }
 
+void pascalTriangle(int rowNum){
+    vector <vector<int>> ans ;
+    if (rowNum <= 0) return;
+     int n =1;
+     ans.push_back({1});
+     while(n<rowNum){
+        vector<int> row ;
+        row.push_back(1);
+        vector<int > prev=ans[ans.size()-1];
+        for(int i =0;i<prev.size()-1;i++){
+            row.push_back(prev[i]+prev[i+1]);
+        }
+         row.push_back(1);
+        ans.push_back(row);
+        n++;
+     }
+    for(int i =0;i<ans.size();i++){
+        for(int j =0;j<ans[i].size();j++){
+            cout<<ans[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+}
+
 int main(){
     printSpiral();
+    pascalTriangle(4);
 }
