@@ -1,6 +1,14 @@
 #include<iostream>
 using namespace std;
 
+long long fact(int n){
+    long long fact = 1 ;    
+    for(int i=1;i<=n;i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+
 void primeNo(){
     for(int i=2;i<=100;i++){
         bool flag=true;
@@ -11,25 +19,14 @@ void primeNo(){
             }
         }
         if(flag){
-            cout<<i<<" ";
+            cout<<i<<" "<<" and factorial : "<<fact(i) <<"\n ";
         }
     }
-}
-
-void fact(){
-    int fact = 1 , n;
-    cout<<"Enter the number to find factorial : ";
-    cin>>n;     
-    for(int i=1;i<=n;i++){
-        fact = fact * i;
-    }
-    cout<<"Factorial of "<<n<<" is : "<<fact;
 }
 
 int main (){
     primeNo();
     cout<<endl;
-    fact();
 }
 
 
